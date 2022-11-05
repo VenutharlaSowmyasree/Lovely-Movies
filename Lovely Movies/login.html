@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+} 
+body {
+background-image:url("background image.jpg");
+background-size:100%;
+}
+h1 {
+font-size: 50px;
+margin-left:100px;
+text-align: center;
+height: 110px;
+width: 2.3%;
+color: rgb(128, 0, 255);
+}
+#input {
+margin-left: 550px;
+line-height: 1.75;
+text-align: center;
+width: 25%;
+padding: 20px 20px;
+font-size: 20px;
+border: 2px solid black;
+background-color: rgb(255, 132, 0);
+size: 100%
+}
+</style>
+<title>
+login page
+</title>
+</head>
+<style>
+	.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #48fbac;
+}
+.button1:hover {
+  background-color: #d90ac8;
+  color: white;
+}
+</style>
+<body>
+<h1>LOVELY MOVIES</h1>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<div id="input">
+<form>
+<strong>User Name</strong>
+<input type="text" name="userid" requried />
+<strong>Password</strong>
+<input  type="password" name="paswd" required /><br>
+<input  type="button" value="log in" class="button button1" onclick="check(this.form)">
+</form>
+<script>
+var user=["sir","lpu","html","int","keerthi"];
+var pass=["sir123","lpu123","html143","int219","keerthi890"];
+var i,j=0;
+ function check(form)
+{
+for(i=0;i<9;i++)
+{
+if(form.userid.value==user[i]&&form.paswd.value==pass[i])
+{
+window.open("movie.html");
+}
+}
+if(j==0)
+{
+	alert("Wrong username or password");}
+}
+</script>
+<div>
+</body>
+<a href="signin.html" class="previous">&laquo; Previous</a>
+</html>

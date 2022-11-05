@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+          a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+.next {
+  background-color: #04AA6D;
+  color: white;
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #ffff00;
+}
+
+.button1:hover {
+  background-color: #ffff00;
+  color: white;
+}
+
+.button2 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #654321;
+}
+
+.button2:hover {
+  background-color: #654321;
+  color: white;
+}
+
+.button3 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #FF4500;
+}
+
+.button3:hover {
+  background-color: #FF4500;
+  color: white;
+}
+</style>
+<title>Credit Card Payment</title>
+</head>
+<body bgcolor="powderblue">
+<center><h1><b><u>CREDIT CARD PAYMENT</u></b></h1></center>
+    <section>
+    <form name=payment>
+        <fieldset>
+            <ol>
+                <li>
+                    <label for=name>Name</label>
+                    <input id=name name=name type=text placeholder="First and last name" required autofocus />
+                </li><br>
+                <li>
+                    <label for=email>Email</label>
+                    <input id=email name=email type=email placeholder="example@domain.com" required />
+                </li><br>
+                <li>
+                    <label for=phone>Phone</label>
+                    <input id=phone name=phone type=text placeholder="Eg. +91 000 000 0000" required />
+                </li><br>
+            </ol>
+        </fieldset>
+        <fieldset>
+           <legend>Card Details</legend>
+            <ol>
+             <li>
+                <fieldset>
+           <legend>Card Type</legend>
+                    <ol>
+                        <li>
+                            <input value="visa" name=cardtype type=radio>Visa
+                        </li>
+                        <li>
+                            <input value="rupay" name=cardtype type=radio>Rupay
+                        </li>
+                        <li>
+                            <input value="mastercard" name=cardtype type=radio>Master Card
+                        </li>
+                    </ol>
+                </fieldset>
+                </li>
+                <li>
+                    <label for=cardnumber>Card Number</label>
+                    <input id=cardnumber name=cardnumber type=number placeholder="Cardnumber" required />
+                </li><br>
+                <li>
+                    <label for=valid>Valid Till</label>
+                    <input id=valid name=valid type=text placeholder="MM/YYYY" required />
+                </li><br>
+                <li>
+                    <label for=secure>Security Code</label>
+                    <input id=secure name=secure placeholder="Security Code" type="password" required />
+                </li><br>
+                <li>
+                    <label for=namecard>Name on Card</label>
+                    <input id=namecard name=namecard type=text placeholder="Exact name as on the card" required />
+                </li><br>
+            </ol>
+        </fieldset>
+        <fieldset>
+
+            <input type="button" class="button button2" value="Pay Now" onclick="pay();">
+            <input type="button" class="button button3" value="Proceed" onclick=window.open("sucess.html")>
+            <input type="button" class="button button1" value="Check confirm details" onclick="display();">
+            <br>
+            <p>**Please click on Proceed after Pay Now.</p>
+        </fieldset>
+    </form>
+</section>
+<script>
+    function display()
+{
+var x=document.payment.name.value;
+var y=document.payment.email.value;
+var A=document.payment.phone.value;
+var B=document.payment.cardtype.value;
+var C=document.payment.cardnumber.value;
+var D=document.payment.valid.value;
+var E=document.payment.secure.value;
+var F=document.payment.namecard.value;
+alert("NAME:"+x+"   "+"Email:"+y+"   "+"Phone:"+A+"   "+"Card Type:"+B+"   "+"Card Number:"+C+"   "+"Valid Till:"+D+"   "+"Security Code:"+E+"   "+"Name on Card:"+F+"   ");
+}
+function pay()
+{
+    alert("paid successfully")
+}
+</script>
+</body>
+<a href="paytry.html" class="previous">&laquo; Previous</a>
+<a href="paytm.html" class="next">Next &raquo;</a>
+</html>
